@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "a plugin for babel to load on demand from import.",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hazyzh/babel-plugin-import-separation"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf lib && ./node_modules/.bin/babel src --out-dir lib --ignore __tests__",
+    "test": "npm run build && mocha",
+    "lint": "eslint --ext .js src"
   },
   "keywords": [
     "babel",
@@ -13,5 +19,28 @@
     "separation"
   ],
   "author": "Hazyzh",
-  "license": "ISC"
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "umi",
+        {
+          "commonjs": true,
+          "disableTransform": true
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@babel/helper-module-imports": "^7.0.0-beta.39"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.39",
+    "babel-preset-umi": "^0.2.5",
+    "colors": "^1.1.2",
+    "eslint": "^4.17.0",
+    "mocha": "^5.0.0",
+    "standard": "^10.0.3"
+  }
 }
