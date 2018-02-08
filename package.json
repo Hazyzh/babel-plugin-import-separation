@@ -1,0 +1,17 @@
+{
+  "name": "babel-plugin-import-separation",
+  "version": "1.0.0",
+  "description": "a plugin for babel to load on demand from import.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel",
+    "plugins",
+    "import",
+    "separation"
+  ],
+  "author": "Hazyzh",
+  "license": "ISC"
+}
