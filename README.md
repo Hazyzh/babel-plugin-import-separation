@@ -46,6 +46,6 @@ Via `.babelrc` or babel-loader.
 
 ```js
 {
-  "plugins": [["import", options]]
+  "plugins": [["import-separation", options]]
 }
 ```
