@@ -2,11 +2,11 @@
   "name": "babel-plugin-import-separation",
   "version": "1.0.0",
   "description": "a plugin for babel to load on demand from import.",
-  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Hazyzh/babel-plugin-import-separation"
   },
+  "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib && ./node_modules/.bin/babel src --out-dir lib --ignore __tests__",
     "test": "npm run build && mocha",
@@ -19,18 +19,20 @@
     "separation"
   ],
   "author": "Hazyzh",
-  "license": "ISC",
+  "license": "MIT",
   "babel": {
     "presets": [
-      [
-        "umi",
-        {
-          "commonjs": true,
-          "disableTransform": true
-        }
-      ]
+      ["umi", {
+        "commonjs": true,
+        "disableTransform": true
+      }]
     ]
   },
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
   "dependencies": {
     "@babel/helper-module-imports": "^7.0.0-beta.39"
   },
