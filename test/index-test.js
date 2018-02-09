@@ -12,7 +12,7 @@ const fixtures = readdirSync(fixturesDir);
 
 describe('#index', () => {
   fixtures.forEach(item => {
-    it(`test for *** ${item.green.bold} ***`, () => {
+    it(`test for *** ${item.green.bold}`, () => {
       const expectCode = readFileSync(join(fixturesDir, item, 'expected.js'), 'utf-8')
       const config = require(join(fixturesDir, item, 'config.js'))
       const code = readFileSync(join(fixturesDir, item, 'actual.js'), 'utf-8')
