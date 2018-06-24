@@ -77,3 +77,28 @@ npm install babel-plugin-import-separation --save-dev
   "plugins": [["import-separation", options]]
 }
 ```
+
+### 支持多个库 
+
+#### `babel6` 及以下版本如下
+
+```js
+{
+  "plugins": [
+        ["import-separation", 
+            [ {...option1}, {...option2} ]
+        ]
+      ]
+}
+```
+#### `babel7` Options 不能为数组，但是你可以添加多次用不同的名字
+
+```js
+{
+  "plugins": [
+        ["import-separation", options1, 'antd'],
+        ["import-separation", options2, 'lodash']
+      ]
+}
+```
+
