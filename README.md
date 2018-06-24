@@ -61,7 +61,7 @@ ReactDOM.render(<Button>xxxx</Button>);
 
 import 'antd/lib/button/style';
 import Button from 'antd/lib/button';
-ReactDOM.render(<_button>xxxx</_button>);
+ReactDOM.render(<Button>xxxx</Button>);
 ```
 
 ## 使用
