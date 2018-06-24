@@ -17,10 +17,10 @@ describe('#index', () => {
       const config = require(join(fixturesDir, item, 'config.js'))
       const code = readFileSync(join(fixturesDir, item, 'actual.js'), 'utf-8')
 
+      const plugins = Array.isArray(config) ? config.map(item => [ plugin, item, item.libraryName ] ) : [[ plugin, config ]];
+
       const resCode = transform(code, {
-        plugins: [
-          [ plugin, config ]
-        ]
+        plugins
       }).code
 
       assert.strictEqual(expectCode.trim(), resCode.trim())
